@@ -1,0 +1,12 @@
+{
+  "name": "natours",
+  "source": "src/index.html",
+  "packageManager": "yarn@3.2.4",
+  "devDependencies": {
+    "@parcel/transformer-sass": "2.8.0",
+    "parcel": "^2.8.0"
+  },
+  "scripts": {
+    "start": "parcel"
+  }
+}

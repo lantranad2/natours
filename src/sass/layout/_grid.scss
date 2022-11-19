@@ -3,7 +3,7 @@
 .grid {
   display: grid;
 
-  @include md {
-    grid-template-columns: 2fr 2fr;
-  }
+  // @include md {
+  //   grid-template-columns: 1fr 1fr;
+  // }
 }

@@ -1,9 +1,12 @@
 $color-primary: #55c57a;
-$color-primary-dark: #28b485;
 $color-primary-light: #7ed56f;
+$color-primary-dark: #28b485;
 
-$color-secondary-dark: #ff7730;
 $color-secondary-light: #ffb900;
+$color-secondary-dark: #ff7730;
+
+$color-tertiary-light: #2998ff;
+$color-tertiary-dark: #5643fa;
 
 $color-grey: #777;
 $color-grey-light: #f7f7f7;
@@ -17,3 +20,6 @@ $z-index-menu-bg: 1;
 $z-index-menu-hidden: -2;
 $z-index-menu: 2;
 $z-index-icons: 3;
+
+$z-index-bottom: 0;
+$z-index-top: $z-index-bottom + 1;

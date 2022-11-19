@@ -91,3 +91,246 @@
     }
   }
 }
+
+.tours {
+  gap: 7rem;
+
+  &__items {
+    width: 100%;
+    gap: 5rem;
+  }
+
+  &__item {
+    width: 100%;
+    max-width: 420px;
+    justify-self: center;
+    overflow: hidden;
+    background: $color-grey-light;
+    background: #fff;
+    border-radius: 7px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+  }
+
+  &__img {
+    background-size: cover;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+    background-blend-mode: screen;
+    height: 220px;
+    position: relative;
+  }
+
+  &__item--secondary &__img {
+    background-image: linear-gradient(
+        to right,
+        $color-secondary-light,
+        $color-secondary-dark
+      ),
+      url(../images/tours-the-secondary.jpg);
+  }
+
+  &__item--primary &__img {
+    background-image: linear-gradient(
+        to right,
+        $color-primary-light,
+        $color-primary-dark
+      ),
+      url(../images/tours-the-primary.jpg);
+  }
+
+  &__item--tertiary &__img {
+    background-image: linear-gradient(
+        to right,
+        $color-tertiary-light,
+        $color-tertiary-dark
+      ),
+      url(../images/tours-the-tertiary.jpg);
+  }
+
+  &__heading {
+    position: absolute;
+    width: 200px;
+    bottom: 5rem;
+    right: 2rem;
+    text-align: right;
+  }
+
+  &__heading-text {
+    text-transform: uppercase;
+    font-size: 2.4rem;
+    font-weight: 400;
+    padding: 0.6rem 1.2rem;
+    color: $color-grey-light;
+    box-decoration-break: clone;
+  }
+
+  &__item--secondary &__heading-text {
+    background: linear-gradient(
+      to right,
+      $color-secondary-light,
+      $color-secondary-dark
+    );
+  }
+
+  &__item--primary &__heading-text {
+    background: linear-gradient(
+      to right,
+      $color-primary-light,
+      $color-primary-dark
+    );
+  }
+
+  &__item--tertiary &__heading-text {
+    background: linear-gradient(
+      to right,
+      $color-tertiary-light,
+      $color-tertiary-dark
+    );
+  }
+
+  &__list {
+    padding: 1.5rem 0;
+  }
+
+  &__list-item {
+    padding: 0.6rem;
+    border-bottom: 1px solid lighten($color-grey, 40);
+    text-align: center;
+    font-weight: 300;
+    width: 50%;
+    margin: 0 auto;
+
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+
+  &__side--back {
+    padding: 3rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
+  }
+
+  &__item--secondary &__side--back {
+    background: linear-gradient(
+      to right,
+      $color-secondary-light,
+      $color-secondary-dark
+    );
+  }
+
+  &__item--primary &__side--back {
+    background: linear-gradient(
+      to right,
+      $color-primary-light,
+      $color-primary-dark
+    );
+  }
+
+  &__item--tertiary &__side--back {
+    background: linear-gradient(
+      to right,
+      $color-tertiary-light,
+      $color-tertiary-dark
+    );
+  }
+
+  &__subheading {
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    color: $color-grey-light;
+    font-weight: 300;
+  }
+
+  &__price {
+    font-size: 3.5rem;
+    color: $color-grey-light;
+    font-weight: 300;
+    margin-bottom: 1rem;
+  }
+
+  &__btn {
+    align-self: center;
+  }
+
+  @include xs-2 {
+    &__list-item {
+      width: 75%;
+    }
+  }
+
+  @include lg {
+    &__items {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.6rem;
+    }
+
+    &__item {
+      perspective: 150rem;
+      position: relative;
+      height: 480px;
+      box-shadow: none;
+      background: none;
+      overflow: visible;
+    }
+
+    &__side {
+      backface-visibility: hidden;
+      transition: transform 0.8s ease;
+      border-radius: 7px;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+      overflow: hidden;
+    }
+
+    &__side--front {
+      background: #fff;
+      position: relative;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__side--back {
+      transform: rotateY(180deg);
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      clip-path: none;
+    }
+
+    &__price {
+      font-size: 6rem;
+      margin-bottom: 8rem;
+    }
+
+    &__item:hover &__side--front {
+      transform: rotateY(-180deg);
+    }
+
+    &__item:hover &__side--back {
+      transform: rotateY(0);
+    }
+
+    &__list {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    &__list-item {
+      width: 75%;
+    }
+  }
+
+  @include xl {
+    &__items {
+      gap: 5rem;
+    }
+  }
+}

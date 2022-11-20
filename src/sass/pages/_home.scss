@@ -362,3 +362,63 @@
     align-self: center;
   }
 }
+
+.booking {
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    width: calc(100% - 3.2rem);
+    max-width: 420px;
+    background: linear-gradient(
+        170deg,
+        rgba($color-grey-light, 0.8) 0%,
+        rgba($color-grey-light, 0.8) 65%,
+        transparent 65%
+      ),
+      center / cover url("../images/booking-bg.jpg");
+    border-radius: 7px;
+    box-shadow: 0 15px 40px rgba($color-grey, 0.2);
+    padding: 4rem 3rem 20rem;
+  }
+
+  @include xs-2 {
+    &__content {
+      padding-bottom: 25rem;
+    }
+  }
+
+  @include md {
+    &__content {
+      max-width: 1200px;
+      background: linear-gradient(
+          105deg,
+          rgba($color-grey-light, 0.8) 0%,
+          rgba($color-grey-light, 0.8) 62%,
+          transparent 62%
+        ),
+        center / cover url("../images/booking-bg.jpg");
+      padding-bottom: 4rem;
+    }
+
+    &__form {
+      width: 60%;
+    }
+  }
+
+  @include lg {
+    &__content {
+      background: linear-gradient(
+          105deg,
+          rgba($color-grey-light, 0.8) 0%,
+          rgba($color-grey-light, 0.8) 50%,
+          transparent 50%
+        ),
+        center / cover url("../images/booking-bg.jpg");
+    }
+
+    &__form {
+      width: 45%;
+    }
+  }
+}

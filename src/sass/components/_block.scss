@@ -2,6 +2,14 @@
 @use "../abstracts/mixins" as *;
 
 .block {
+  &--primary {
+    background: linear-gradient(
+      to right,
+      $color-primary-light,
+      $color-primary-dark
+    );
+  }
+
   padding-top: 25rem;
   padding-bottom: 25rem;
   display: flex;

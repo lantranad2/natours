@@ -4,6 +4,10 @@
 .about {
   &__content {
     gap: 1rem;
+
+    @include lg {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 
   &__imgs {

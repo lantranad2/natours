@@ -60,11 +60,16 @@
 
   &__imgs {
     display: flex;
+    height: 150px;
+
+    & > * {
+      flex: 1;
+    }
   }
 
   &__img {
-    width: 50%;
-    height: 175px;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
   }
 
@@ -87,7 +92,7 @@
   }
 
   @include xs-2 {
-    &__img {
+    &__imgs {
       height: 125px;
     }
 
@@ -97,7 +102,7 @@
   }
 
   @include xs-3 {
-    &__img {
+    &__imgs {
       height: 100px;
     }
 
@@ -114,7 +119,6 @@
     &__text {
       column-count: 2;
       column-gap: 2rem;
-      // column-rule: 1px solid lighten($color-grey, 40%);
     }
   }
 
@@ -133,14 +137,10 @@
     }
 
     &__imgs {
+      height: 100%;
+
       flex-direction: column;
       flex: 1;
-    }
-
-    &__img {
-      width: 100%;
-      height: 270px;
-      object-fit: cover;
     }
 
     &__info {

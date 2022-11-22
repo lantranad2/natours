@@ -4,6 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="This project is about HTML5, CSS3, Sass and JavaScript"
+    />
+    <meta name="keywords" content="HTML5, CSS3, Sass, JavaScript" />
     <title>Natours | HTML5, CSS3, SASS Tutorial</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -52,23 +57,27 @@
       </div>
       <ul class="nav__list">
         <li class="nav__item">
-          <a class="nav__link" href="#">About Natours</a>
+          <a class="nav__link" href="#about">About Natours</a>
         </li>
         <li class="nav__item">
-          <a class="nav__link" href="#">Your Benefits</a>
+          <a class="nav__link" href="#features">Your Benefits</a>
         </li>
         <li class="nav__item">
-          <a class="nav__link" href="#">Popular Tours</a>
+          <a class="nav__link" href="#tours">Popular Tours</a>
         </li>
-        <li class="nav__item"><a class="nav__link" href="#">Stories</a></li>
-        <li class="nav__item"><a class="nav__link" href="#">Book Now</a></li>
+        <li class="nav__item">
+          <a class="nav__link" href="#stories">Stories</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="#booking">Book Now</a>
+        </li>
       </ul>
     </nav>
     <div class="popup">
       <div class="popup__content">
         <span class="popup__close">&#x2716;</span>
         <div class="popup__imgs">
-          <picture>
+          <picture class="popup__pic">
             <source
               type="image/webp"
               srcset="images/popup-1.webp 1x, images/popup-1@2x.webp 2x"
@@ -83,8 +92,7 @@
               alt="Mary Smith"
             />
           </picture>
-
-          <picture>
+          <picture class="popup__pic">
             <source
               type="image/webp"
               srcset="images/popup-2.webp 1x, images/popup-2@2x.webp 2x"
@@ -119,13 +127,13 @@
               diam ut venenatis.
             </p>
           </div>
-          <a href="#" class="btn btn--secondary popup__btn">Book Now</a>
+          <a href="#booking" class="btn btn--secondary popup__btn">Book Now</a>
         </div>
       </div>
     </div>
-    <header class="header">
+    <header class="header" id="header">
       <div class="container header__logo">
-        <a href="#"><img src="images/logo.png" alt="Natours Logo" /></a>
+        <a href="/"><img src="images/logo.png" alt="Natours Logo" /></a>
       </div>
       <div class="header__content">
         <h1 class="header__title">
@@ -140,7 +148,7 @@
       </div>
     </header>
     <main>
-      <section class="block about">
+      <section class="block about" id="about">
         <header class="container block__header">
           <h2 class="block__heading">Exciting Tours For Adventurous People</h2>
         </header>
@@ -220,7 +228,7 @@
           </div>
         </div>
       </section>
-      <section class="block features">
+      <section class="block features" id="features">
         <div class="container grid features__list">
           <div class="card features__item">
             <div class="icon icon-basic-world features__icon"></div>
@@ -258,7 +266,7 @@
           </div>
         </div>
       </section>
-      <section class="block tours">
+      <section class="block tours" id="tours">
         <header class="container block__header">
           <h2 class="block__heading">Most Popular Tours</h2>
         </header>
@@ -331,7 +339,7 @@
           Discover All Tours
         </button>
       </section>
-      <section class="block stories">
+      <section class="block stories" id="stories">
         <video class="stories__video" autoplay muted loop>
           <source src="images/video.webm" type="video/webm" />
           <source src="images/video.mp4" type="video/mp4" />
@@ -408,7 +416,7 @@
         </div>
         <a href="#" class="link stories__link">Read all stories &rarr;</a>
       </section>
-      <section class="block block--primary booking">
+      <section class="block block--primary booking" id="booking">
         <div class="container booking__content">
           <div class="form__header">
             <h2 class="block__heading form__heading">Start Booking Now</h2>
@@ -469,7 +477,7 @@
         </div>
       </section>
     </main>
-    <footer class="block block--dark footer">
+    <footer class="block block--dark footer" id="footer">
       <div class="container footer__content">
         <picture>
           <source
